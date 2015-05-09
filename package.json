@@ -1,0 +1,32 @@
+{
+  "name": "aqua",
+  "version": "0.0.1",
+  "description": "Site de aqua kine",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kinesitherapeute/aqua.git"
+  },
+  "keywords": [
+    "kine"
+  ],
+  "author": "Pierre Besson <pierre.besson7@gmail.com> (http://pierr.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kinesitherapeute/aqua/issues"
+  },
+  "homepage": "https://github.com/kinesitherapeute/aqua",
+  "dependencies": {
+    "lodash": "^3.8.0",
+    "material-ui": "^0.7.5",
+    "react": "^0.13.3",
+    "react-tap-event-plugin": "^0.1.6"
+  },
+  "devDependencies": {
+    "browserify": "^10.1.3",
+    "reactify": "^1.1.0"
+  }
+}
