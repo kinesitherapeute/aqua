@@ -12,9 +12,9 @@ export default class Team extends Component {
      <Block style={style} title='Equipe' subTitle='Aqua Kine sport team'>
          {
            list.map((member)=>{
-             let {firstName, lastName, photo, skills} = member;
+             let {firstName, lastName, photo, skills, id} = member;
              return (
-               <div style={memberStyle}>
+               <div style={memberStyle} key={id}>
                 <img src={photo}/>
                 <span>{firstName} {lastName}</span>
                 <p>{skills}</p>
