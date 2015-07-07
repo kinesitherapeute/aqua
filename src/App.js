@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-
+import Layout from './view/layout'
 export default class App extends Component {
   render() {
+    let title = this.props.title;
     return (
-      <h1>{this.props.title}</h1>
+      <Layout title={title}/>
     );
   }
 }
