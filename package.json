@@ -4,7 +4,8 @@
   "description": "Site de aqua kine",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "start": "node server.js",
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "webpack-dev-server": "^1.8.2"
   },
   "dependencies": {
+    "materialize-css": "^0.96.1",
     "react": "^0.13.0"
   }
 }
