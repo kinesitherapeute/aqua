@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Container from '../component/container';
 import Block from '../component/block';
-let style = {className: 'team'};
+let style = {className: 'team', backgroundColor: "tomato"};
 let memberStyle= {className: 'member'};
 
 export default class Team extends Component {
