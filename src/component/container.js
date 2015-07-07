@@ -5,7 +5,6 @@ export default class Container extends Component {
     return (
       <div className="container">
         <div className="section">
-          <!--   Icon Section   -->
           <div className="row">
             {this.props.children}
           </div>

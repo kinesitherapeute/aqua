@@ -1,22 +1,29 @@
 import React, { Component } from 'react';
-export default class Layout extends Component {
+import Container from '../component/container';
+import Block from '../component/block';
+let style = {className: 'team'};
+let memberStyle= {className: 'member'};
+
+export default class Team extends Component {
   render() {
-    let { list } = this.props;
+    let {list} = this.props;
     return (
-      <ul className='team'>
-        {list.map((member)=>{
-          let {firstName, lastName, photo, skills} = member;
-          return (
-            <li>
-              <img src={photo}/>
-              <span>{firstName} {lastName}</span>
-              <p>
-                {skills}
-              </p>
-            </li>
-          )
-        })}
-      </ul>
+    <Container>
+     <Block style={style} title='Equipe' subTitle='Aqua Kine sport team'>
+         {
+           list.map((member)=>{
+             let {firstName, lastName, photo, skills} = member;
+             return (
+               <div style={memberStyle}>
+                <img src={photo}/>
+                <span>{firstName} {lastName}</span>
+                <p>{skills}</p>
+               </div >
+             );
+           })
+        }
+        </Block>
+      </Container>
     );
   }
 }
