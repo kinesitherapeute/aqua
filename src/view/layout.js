@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './header';
-import Drawer from './drawer';
+import Banner from './drawer';
 import Content from './content';
 
 import Team from './team'
@@ -11,12 +11,16 @@ export default class Layout extends Component {
   render() {
     let { title } = this.props;
     return (
-      <div className='mdl-layout mdl-js-layout mdl-layout--fixed-header'>
+      <div className='layout'>
         <Header />
-        <Drawer/>
+        <Banner>
+
+        </Banner>
+        <Content>
+          <Cabinet {...cabinetData} />
+        </Content>
         <Content>
           <h1>{title}</h1>
-          <Cabinet {...cabinetData} />
           <Team list={teamData}/>
         </Content>
       </div>

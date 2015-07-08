@@ -1,28 +1,29 @@
 import React, { Component } from 'react';
+import Cabinet from './cabinet'
+import cabinetData from '../data/cabinet'
 
 export default class Drawer extends Component {
   render() {
     return (
-      <div className="mdl-layout__drawer">
-              <span className="mdl-layout-title">
-                <img className="logo-image" src="images/android-logo-white.png" />
-              </span>
-              <nav className="mdl-navigation">
-                <a className="mdl-navigation__link" href="">Phones</a>
-                <a className="mdl-navigation__link" href="">Tablets</a>
-                <div className="mdl-drawer-separator"></div>
-                <span className="mdl-navigation__link" href="">Versions</span>
-                <a className="mdl-navigation__link" href="">Jelly Bean 4.3</a>
-                <a className="mdl-navigation__link" href="">Android history</a>
-                <div className="mdl-drawer-separator"></div>
-                <span className="mdl-navigation__link" href="">Resources</span>
-                <a className="mdl-navigation__link" href="">Android on Twitter</a>
-                <div className="mdl-drawer-separator"></div>
-                <span className="mdl-navigation__link" href="">For developers</span>
-                <a className="mdl-navigation__link" href="">Android Open Source Project</a>
-                <a className="mdl-navigation__link" href="">Android SDK</a>
-              </nav>
+      <div className="parallax-container">
+
+        <div className="section no-pad-bot">
+          <div className="container">
+            <br/><br/>
+            <h1 className="header center teal-text text-lighten-2">Parallax Template</h1>
+            <div className="row center">
+              <h5 className="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+            </div>
+            <div className="row center">
+              <a href="http://materializecss.com/getting-started.html" id="download-button" className="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+            </div>
+            <br/><br/>
+          </div>
+          <div className="parallax">
+            <img src="http://cdn.images.express.co.uk/img/dynamic/25/590x/thermae-bath-spa-450381.jpg" alt="Unsplashed background img 1" style={{display: 'block'}}/>
+          </div>
         </div>
+      </div>
     );
   }
 }

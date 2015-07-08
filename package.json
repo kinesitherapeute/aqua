@@ -31,6 +31,7 @@
     "webpack-dev-server": "^1.8.2"
   },
   "dependencies": {
+    "jquery": "^2.1.4",
     "material-design-lite": "^1.0.0",
     "materialize-css": "^0.96.1",
     "react": "^0.13.0"

@@ -3,23 +3,19 @@ import React, { Component } from 'react';
 export default class Header extends Component {
   render() {
     return (
-      <div className=" mdl-layout__header mdl-layout__header--waterfall">
-        <div className="mdl-layout__header-row">
-          <span className="mdl-layout-title">
-            <img className="image" src="" />
-          </span>
-          <div className="mdl-layout-spacer"></div>
-          <div className="mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
-            <label className="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-              <i className="material-icons">search</i>
-            </label>
-            <div className="mdl-textfield__expandable-holder">
-              <input className="mdl-textfield__input" type="text" id="search-field" />
-            </div>
-          </div>
-        </div>
-      </div>
+      <nav className="white" role="navigation">
+        <div className="nav-wrapper container">
+          <a id="logo-container" href="#" className="brand-logo">Logo</a>
+          <ul className="right hide-on-med-and-down">
+            <li><a href="#">Navbar Link</a></li>
+          </ul>
 
+          <ul id="nav-mobile" className="side-nav" style={{left: '-250'}}>
+            <li><a href="#">Navbar Link</a></li>
+          </ul>
+          <a href="#" data-activates="nav-mobile" className="button-collapse"><i className="material-icons">menu</i></a>
+        </div>
+      </nav>
     );
   }
 }
