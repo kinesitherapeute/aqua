@@ -1,12 +1,12 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import App from './App';
+
+// data
 const TITLE = 'Aqua kine sports';
-React.render(<App title={TITLE}/>, document.getElementById('root'));
-(function($){
-  $(function(){
+import teamData from './data/team';
+import cabinetData from './data/cabinet';
+import presentationData from './data/presentation';
 
-    $('.button-collapse').sideNav();
-    $('.parallax').parallax();
-
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
+// render the app
+ReactDOM.render(<App title={TITLE} team={teamData} cabinet={cabinetData} {...presentationData}/>, document.getElementById('root'));
