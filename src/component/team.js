@@ -16,7 +16,7 @@ function Member({firstName, lastName, skills, photo, content}){
 function Team({members}){
     return (
         <div style={teamStyle}>
-            {members.map((member) => <Member {...member} />)}
+            {members.map((member, idx) => <Member key={idx} {...member} />)}
         </div>
     );
 }
