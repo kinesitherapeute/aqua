@@ -9,7 +9,7 @@ function Contact({name, phone, photo, address}){
     return (
         <List>
           <ListItem primaryText={name}  leftIcon={<BikeIcon />}/>
-          <ListItem primaryText={phone} leftIcon={<PhoneIcon />} />
+          <ListItem primaryText={<a href={`tel:${phone}`}>{phone}</a>} leftIcon={<PhoneIcon />} />
           <ListItem primaryText={`${number} ${street}`}  leftIcon={<HomeIcon/>} />
         </List>
     );

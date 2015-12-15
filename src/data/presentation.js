@@ -4,7 +4,7 @@ export default {
         content: 'Super kine'
     },
     balneo:{
-        title: 'kiné',
+        title: 'Balnéo',
         content: 'Super balnéo'
     },
     aquaBike: {

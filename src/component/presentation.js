@@ -1,16 +1,16 @@
 import React from 'react';
 import {Card, CardHeader, CardMedia, CardText, CardTitle} from 'material-ui/lib/card';
-import {presentation as style} from './style';
+import {presentation as presentationStyle, presentationCard as cardStyle} from './style';
 function PresentationCard({title, content}){
-    return <Card><CardTitle title={title}/><CardText>{content}</CardText></Card>;
+    return <div  style={cardStyle}><Card><CardTitle title={title}/><CardText>{content}</CardText></Card></div>;
 }
 
 function Presentation({kine, balneo, aquaBike}){
     return (
-        <presentation style={style}>
+        <presentation style={presentationStyle}>
             <PresentationCard {...kine}/>
-            <PresentationCard {...balneo}/>
             <PresentationCard {...aquaBike}/>
+            <PresentationCard {...balneo}/>
         </presentation>
     );
 }
