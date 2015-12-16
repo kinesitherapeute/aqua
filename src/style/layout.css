@@ -1,0 +1,59 @@
+
+@define-mixin flexContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+body{
+    background-color: white;
+    margin: 0px 0px 0px 0px;
+    background: url("http://table-de-massage-electrique.fr/media/wysiwyg/Kinesitherapie/masseur-kinesitherapeute.jpg") center / cover;
+
+    header{
+        background-color: blue;
+        color: white;
+        height: 10vh;
+    }
+
+    section[data-kine='content'] {
+        margin: auto;
+        width: 80%;
+        margin-top: -147px;
+        box-shadow: 5px 0 5px -5px black, -5px 0 5px -5px black;
+        background-color: rgba(255, 255, 255, 0.5);;
+        section[data-kine='intro']{
+            height: calc(100vh + 8vh - 10vh);
+            background-size: auto 100%;
+
+            h1{
+                font: 500%/1 Rockwell, serif;
+                background: deeppink;
+                color: white;
+                height: 10%;
+                text-align: center;
+                align-items: center;
+                vertical-align: center;
+
+            }
+
+            p {
+                height: 30%;
+            }
+            presentation{
+                align-items: center;
+                height: 60%;
+                bottom: 0px;
+                width: 100%;
+                @mixin flexContainer;
+                &>div {
+                    width: 30%;
+                    height: 100%;
+                }
+            }
+        }
+
+    }
+
+}

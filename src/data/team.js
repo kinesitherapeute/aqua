@@ -1,7 +1,5 @@
-let data = [
-  {"id": 1, "firstName": "Catherine", "lastName": "Besson", "photo":null, "skills": "kine respi"},
-  {"id": 2, "firstName": "Jacques", "lastName": "Besson", "photo":null, "skills": "top kine"},
-  {"id": 3, "firstName": "Olivier", "lastName": "XXXXX", "photo":null, "skills": "new kine"}
+export default [
+  {"id": 1, "firstName": "Catherine", "lastName": "Besson", "photo":"http://lorempixel.com/400/200/people/", "skills": "kine respi"},
+  {"id": 2, "firstName": "Jacques", "lastName": "Besson", "photo":"http://lorempixel.com/400/200/people/", "skills": "top kine"},
+  {"id": 3, "firstName": "Olivier", "lastName": "XXXXX", "photo":"http://lorempixel.com/400/200/people/", "skills": "new kine"}
 ];
-
-export default data;
