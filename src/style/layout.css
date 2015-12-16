@@ -20,7 +20,7 @@ body{
     section[data-kine='content'] {
         margin: auto;
         width: 80%;
-        margin-top: -14%;
+        margin-top: -147px;
         box-shadow: 5px 0 5px -5px black, -5px 0 5px -5px black;
         background-color: rgba(255, 255, 255, 0.5);;
         section[data-kine='intro']{
@@ -47,7 +47,6 @@ body{
                 bottom: 0px;
                 width: 100%;
                 @mixin flexContainer;
-
                 &>div {
                     width: 30%;
                     height: 100%;
