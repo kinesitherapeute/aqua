@@ -8,8 +8,7 @@ function reservationsReducer(state = [], action){
         break;
         case RESERVATION_REMOVE:
             const removeIdx = state.findIndex(r => r.id === payload);
-            //state.¨reduce(combine: fn(sum: ?, elt: ?, i: number), init?: ?)
-            return [...state.slice(0,removeIdx), ...state.slice(removeIdx+1)]
+             return [...state.slice(0,removeIdx), ...state.slice(removeIdx+1)]
         break;
     }
     return state;
