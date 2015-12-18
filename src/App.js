@@ -6,11 +6,15 @@ function ReservationList(){
     return <div>reservations</div>
 }
 
-function App({isStaticSite, staticSite}){
-    return isStaticSite ? <StaticSite {...staticSite}/> : <ReservationList />;
+function Static({ staticSite}){
+    return <StaticSite {...staticSite}/>;
 }
 
-export default connect(({isStaticSite = true, staticSite}) => {
-    console.log({staticSite, isStaticSite}, 'HHHHHHHHHHHHHHHHHHHHHHHHH')
-    return {staticSite, isStaticSite}
-})(App)
+export const StaticApp =  connect(({staticSite}) => {
+    return {staticSite}
+})(Static)
+
+export default function App({children}){return <div data-kine='app'>{children}</div>}
+export const ReservationApp = connect(
+    ({}) =>{ return {doto: 'aaaa'};
+})(ReservationList)

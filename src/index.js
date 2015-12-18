@@ -4,11 +4,29 @@ import{ compose, createStore, combineReducers } from 'redux';
 import reducers from './reducers';
 import './style';
 import { Provider} from 'react-redux';
-const store = createStore(combineReducers(reducers))
-
-import App from './App';
 
 
+import { Router, Route } from 'react-router';
+import { createHistory } from 'history';
+import { syncReduxAndRouter, routeReducer } from 'redux-simple-router';
 
+const store = createStore(combineReducers({routing: routeReducer , ...reducers}))
+const history = createHistory();
+syncReduxAndRouter(history, store);
+
+import App, {StaticApp, ReservationApp} from './App';
+
+
+function NoMatch(){return <div>NO MATCH 404</div>}
 // render the app
-ReactDOM.render(<Provider store={store}><App/></Provider>, document.getElementById('root'));
+ReactDOM.render(
+    <Provider store={store}>
+        <Router history={history}>
+          <Route path="/" component={App}>
+            <Route path="home" component={StaticApp}/>
+            <Route path="reservations" component={ReservationApp}/>
+            <Route path="*" component={NoMatch}/>
+          </Route>
+
+        </Router>
+    </Provider>, document.getElementById('root'));
