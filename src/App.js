@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import {connect } from 'react-redux';
 import StaticSite from './component/static-site';
-
-function ReservationList(){
-    return <div>reservations</div>
-}
-
+import ReservationList from './component/reservation-list';
+import {setCurrentReservation} from './actions/reservations';
 function Static({ staticSite}){
     return <StaticSite {...staticSite}/>;
 }
@@ -16,5 +13,6 @@ export const StaticApp =  connect(({staticSite}) => {
 
 export default function App({children}){return <div data-kine='app'>{children}</div>}
 export const ReservationApp = connect(
-    ({}) =>{ return {doto: 'aaaa'};
-})(ReservationList)
+    ({reservations}) => {return {data: reservations}; },
+    ({dispatch}) => {return {onSelect: () => { dispatch(setCurrentReservation)} }; }
+)(ReservationList)

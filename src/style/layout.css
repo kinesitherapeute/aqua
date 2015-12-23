@@ -10,7 +10,7 @@ body{
     background-color: white;
     margin: 0px 0px 0px 0px;
     background: url("http://table-de-massage-electrique.fr/media/wysiwyg/Kinesitherapie/masseur-kinesitherapeute.jpg") center / cover;
-
+    height: 100vh,
     header{
         background-color: blue;
         color: white;

@@ -6,7 +6,7 @@ import './style';
 import { Provider} from 'react-redux';
 
 
-import { Router, Route } from 'react-router';
+import { Router, Route, IndexRoute } from 'react-router';
 import { createHistory } from 'history';
 import { syncReduxAndRouter, routeReducer } from 'redux-simple-router';
 
@@ -15,15 +15,13 @@ const history = createHistory();
 syncReduxAndRouter(history, store);
 
 import App, {StaticApp, ReservationApp} from './App';
-
-
-function NoMatch(){return <div>NO MATCH 404</div>}
+import NoMatch from './component/no-match';
 // render the app
 ReactDOM.render(
     <Provider store={store}>
         <Router history={history}>
           <Route path="/" component={App}>
-            <Route path="home" component={StaticApp}/>
+            <IndexRoute component={StaticApp}/>
             <Route path="reservations" component={ReservationApp}/>
             <Route path="*" component={NoMatch}/>
           </Route>
