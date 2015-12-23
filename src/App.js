@@ -14,5 +14,5 @@ export const StaticApp =  connect(({staticSite}) => {
 export default function App({children}){return <div data-kine='app'>{children}</div>}
 export const ReservationApp = connect(
     ({reservations}) => {return {data: reservations}; },
-    ({dispatch}) => {return {onSelect: () => { dispatch(setCurrentReservation)} }; }
+    (dispatch) => {return {onSelect(d){ dispatch(setCurrentReservation(d));} }; }
 )(ReservationList)
